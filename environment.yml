@@ -1,0 +1,8 @@
+name: py3
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - notebook
+  - scikit-learn
+prefix: /home/babuleh/anaconda3/envs/py3
