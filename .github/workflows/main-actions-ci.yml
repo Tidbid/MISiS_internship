@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies and activate env
       run: |
         conda env update --file environment.yml --name base
-        conda activate base
+        source activate base
     - name: Run the script
       run: |
         ./run.sh
