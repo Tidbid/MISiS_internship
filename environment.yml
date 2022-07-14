@@ -5,4 +5,5 @@ dependencies:
   - matplotlib
   - notebook
   - scikit-learn
+  - kaggle
 prefix: /home/babuleh/anaconda3/envs/py3
