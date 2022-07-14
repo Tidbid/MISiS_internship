@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   build-linux:
+    environment: intern_env
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
@@ -23,7 +24,10 @@ jobs:
         conda env update --file environment.yml --name base
         source activate base
     - name: Run the script
+      env: 
+        KAGGLE: ${{ secrets.KAGGLE_SECRET}}
       run: |
+        echo ${KAGGLE} > ~/.kaggle/kaggle.json
         ./run.sh
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
