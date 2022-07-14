@@ -1,6 +1,5 @@
 #!/bin/bash
-mkdir input
-kaggle datasets download -p input/ --unzip tidbid/titanic-dataset
-ls
-ls input
+mkdir input/titanic-dataset
+kaggle datasets download -p input/titanic-dataset/ --unzip tidbid/titanic-dataset
+ls input/titanic-dataset
 jupyter-nbconvert --execute task1.ipynb --to html
