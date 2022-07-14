@@ -28,6 +28,8 @@ jobs:
       env: 
         KAGGLE: ${{ secrets.KAGGLE_SECRET}}
       run: |
+        mkdir ~/.kaggle
+        touch ~/.kaggle/kaggle.json
         echo ${KAGGLE} > ~/.kaggle/kaggle.json
         ./run.sh
     - name: 'Upload Artifact'
