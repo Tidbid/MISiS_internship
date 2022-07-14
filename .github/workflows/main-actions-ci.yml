@@ -1,6 +1,6 @@
 name: Jupyter Check
 
-on: [push]
+on: workflow_dispatch
 
 jobs:
   build-linux:
@@ -38,4 +38,4 @@ jobs:
         name: my-artifact
         path: |
           task1.html
-          submissions.csv
+          submission.csv
