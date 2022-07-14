@@ -21,7 +21,7 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies and activate env
       run: |
-        conda env update --file environment.yml --name base
+        # conda env update --file environment.yml --name base
         source activate base
         conda install -c conda-forge kaggle -y
     - name: Run the script
