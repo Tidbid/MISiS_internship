@@ -26,7 +26,7 @@ jobs:
         conda install -c conda-forge kaggle -y
     - name: Run the script
       env: 
-        KAGGLE: ${{ secrets.KAGGLE_SECRET}}
+        KAGGLE: ${{secrets.KAGGLE_SECRET}}
       run: |
         mkdir ~/.kaggle
         touch ~/.kaggle/kaggle.json
@@ -36,4 +36,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact
-        path: task1.html
+        path: |
+          task1.html
+          submissions.csv
