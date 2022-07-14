@@ -6,4 +6,7 @@ dependencies:
   - notebook
   - scikit-learn
   - kaggle
+  - numpy
+  - pandas
+  - seaborn
 prefix: /home/babuleh/anaconda3/envs/py3
