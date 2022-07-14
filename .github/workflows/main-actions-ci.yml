@@ -23,6 +23,7 @@ jobs:
       run: |
         conda env update --file environment.yml --name base
         source activate base
+        conda install -c conda-forge kaggle -y
     - name: Run the script
       env: 
         KAGGLE: ${{ secrets.KAGGLE_SECRET}}
